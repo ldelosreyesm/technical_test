@@ -12,7 +12,7 @@ Given(/^I am on the (\w+) page$/, async (page) => {
     await pages[page].open()
 });
 
-When(/^I login with (\w+) and (.+)$/, async (username, password) => {
+When('I login with {string} and {string}', async (username, password) => {
     await LoginPage.login(username, password)
 });
 
